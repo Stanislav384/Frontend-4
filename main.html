@@ -11,6 +11,7 @@
 
 <style>
   main{
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 0;
     width: 100%;
@@ -61,6 +62,86 @@
     top: 137.5px;
     z-index: 2;
   }
+
+  main .main_textbox{
+    position: relative;
+    pointer-events: none;
+    width: 35%;
+    height: 50px;
+    top: 450px;
+    left: 32.5%;
+  }
+
+  .main_textbox .text{
+    position: absolute;
+    background-color: #FFDFBE;
+    border-radius: 10px;
+    height: 50px;
+    width: 85%;
+  }
+  
+  .main_textbox .text p{
+    text-align: center;
+    font-size: 150%;
+    margin: 10px;
+  }
+
+  .main_textbox .button{
+    position: absolute;
+    background-color: #FFDFBE;
+    align-items: center;
+    justify-items: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 10%;
+    left: 90%;
+  }
+
+  .main_textbox .button img{
+    width: 40px;
+    height: 40px;
+    margin-left: 7.5px;
+    margin-top: 7.5px;
+  }
+
+  .main_textbox .button img:hover{
+    cursor: pointer;
+  }
+
+  main .main_generate_button{
+    position: relative;
+    pointer-events: none;
+    width: 25%;
+    height: 105px;
+    top: 500px;
+    left: 37.5%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .main_generate_button .text{
+    position: absolute;
+    background-color: #C3EFA9;
+    height: 60%;
+    width: 60%;
+    margin-left: 20%;
+    top: 22.5px;
+    border-radius: 100px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .main_generate_button .text p{
+    text-align: center;
+    font-size: 150%;
+    margin: 15px;
+  }
+
+  .main_generate_button img{
+    width: 80%;
+    margin-left: 40px;
+  }
+
 </style>
 
 <body>
@@ -105,6 +186,23 @@
       <div class="main_text">
         <h1>Головна сторінка</h1>
         <img src="Group 9.png">
+      </div>
+
+      <div class="main_textbox">
+
+        <div class="text">
+          <p>Тут будуть цитати</p>
+        </div>
+        <div class="button">
+          <img src="arrow-down-sign-to-navigate.png">
+        </div>
+      </div>
+
+      <div class="main_generate_button">
+        <img src="Group 10.png">
+        <div class="text">
+          <p>Згенерувати</p>
+        </div>
       </div>
     </main>
 
