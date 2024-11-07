@@ -1,213 +1,67 @@
 <!DOCTYPE html>
-
 <html lang="ua">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Назва сайту</title>
     <link rel="stylesheet" href="headerstyle.css">
-  </head>
-
-<style>
-  main{
-    background-color: rgb(255, 255, 255);
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .background{
-    pointer-events: none;
-    position: relative;
-  }
-  
-  .background_1{
-    position: absolute;
-    border: none;
-    width: 100%;
-    height: 700px;
-  }
-
-  .background_star1{
-    position: absolute;
-    width: 220px;
-    height: 200px;
-    left: calc(50% - 110px);
-    top: 100px;
-    z-index: 1;
-  }
-
-  main .main_text{
-    pointer-events: none;
-    position: relative;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .main_text h1{
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    font-size: 350%;
-    top: 125px;
-    z-index: 2;
-  }
-
-  .main_text img{
-    position: absolute;
-    width: 550px;
-    height: 125px;
-    left: calc(50% - 275px);
-    top: 137.5px;
-    z-index: 2;
-  }
-
-  main .main_textbox{
-    position: relative;
-    pointer-events: none;
-    width: 35%;
-    height: 50px;
-    top: 450px;
-    left: 32.5%;
-  }
-
-  .main_textbox .text{
-    position: absolute;
-    background-color: #FFDFBE;
-    border-radius: 10px;
-    height: 50px;
-    width: 85%;
-  }
-  
-  .main_textbox .text p{
-    text-align: center;
-    font-size: 150%;
-    margin: 10px;
-  }
-
-  .main_textbox .button{
-    position: absolute;
-    background-color: #FFDFBE;
-    align-items: center;
-    justify-items: center;
-    border-radius: 10px;
-    height: 50px;
-    width: 10%;
-    left: 90%;
-  }
-
-  .main_textbox .button img{
-    width: 40px;
-    height: 40px;
-    margin-left: 7.5px;
-    margin-top: 7.5px;
-  }
-
-  .main_textbox .button img:hover{
-    cursor: pointer;
-  }
-
-  main .main_generate_button{
-    position: relative;
-    pointer-events: none;
-    width: 25%;
-    height: 105px;
-    top: 500px;
-    left: 37.5%;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .main_generate_button .text{
-    position: absolute;
-    background-color: #C3EFA9;
-    height: 60%;
-    width: 60%;
-    margin-left: 20%;
-    top: 22.5px;
-    border-radius: 100px;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .main_generate_button .text p{
-    text-align: center;
-    font-size: 150%;
-    margin: 15px;
-  }
-
-  .main_generate_button img{
-    width: 80%;
-    margin-left: 40px;
-  }
-
-</style>
+    <script src="script.js" defer></script>
+</head>
 
 <body>
 
     <header>
-      <aside class="sidebar">
+        <aside class="sidebar">
+            <ul class="links">
+                <li class="Main">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/2989/2989870.png" alt="icon">
+                    <a class="name" href="main.html">Головна </a>
+                </li><br>
 
-        <ul class="links">
+                <li class="Saved">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/2874/2874091.png" alt="icon">
+                    <a class="name" href="">Збереженні</a>
+                </li><br>
 
-          <li class="Main">
-            <img class="icon" src="https://cdn-icons-png.flaticon.com/128/2989/2989870.png" alt="icon">
-            <p class="name">Головна</p>
-          </li><br>
-
-          <li class="Saved">
-            <img class="icon" src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" alt="icon">
-            <p class="name">Профіль</p>
-          </li><br>
-
-          <li class="Saved">
-            <img class="icon" src="https://cdn-icons-png.flaticon.com/128/2874/2874091.png" alt="icon">
-            <p class="name">Збереженні</p>
-          </li><br>
-
-          <li class="Thema">
-            <img class="icon" src="https://cdn-icons-png.flaticon.com/128/606/606795.png" alt="icon">
-            <p class="name">Тема</p>
-          </li><br>
-
-        </ul>
-
-      </aside>
+                <li class="Thema">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/128/606/606795.png" alt="icon">
+                    <a class="name" href="">Тема</a>
+                </li><br>
+            </ul>
+        </aside>
     </header>
 
     <main>
-
-      <div class="background">
-        <img class="background_1" src="Group 11.png">
-        <img class="background_star1" src="Star 1.png">
-      </div>
-
-      <div class="main_text">
-        <h1>Головна сторінка</h1>
-        <img src="Group 9.png">
-      </div>
-
-      <div class="main_textbox">
-
-        <div class="text">
-          <p>Тут будуть цитати</p>
+        <div class="background">
+            <img class="background_1" src="Group 11.png" alt="background">
+            <img class="background_star1" src="Star 1.png" alt="star">
         </div>
-        <div class="button">
-          <img src="arrow-down-sign-to-navigate.png">
-        </div>
-      </div>
 
-      <div class="main_generate_button">
-        <img src="Group 10.png">
-        <div class="text">
-          <p>Згенерувати</p>
+        <div class="main_text">
+            <h1>Головна сторінка</h1>
+            <img src="Group 9.png" alt="decor">
         </div>
-      </div>
+
+        <div class="main_textbox">
+            <div class="text">
+                <p id="quoteText">Тут будут цитаты</p>
+            </div>
+            <div class="button">
+                <img src="arrow-down-sign-to-navigate.png" alt="arrow">
+            </div>
+        </div>
+
+        <div class="main_generate_button" onclick="generateQuote()">
+            <div class="text">
+                <p>Згенерувати</p>
+            </div>
+        </div>
     </main>
 
     <footer>
         <!-- КОНТАКТНА ІНФОРМАЦІЯ -->
     </footer>
+
 </body>
 </html>
