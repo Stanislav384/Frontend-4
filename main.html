@@ -4,10 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Назва сайту</title>
+    <title>Головна сторінка</title>
     <link rel="stylesheet" href="headerstyle.css">
     <script src="script.js" defer></script>
 </head>
+
+<style>
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    main{
+        position: fixed;
+        display: flex;
+        top: 0;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+    
+    .background{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .background-image{
+        position: relative;
+        width: 100%;
+        height: 85%;
+        
+    }
+    .background-items{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .title-star{
+        position: absolute;
+        top: 15%;
+        width: 220px;
+        height: 190px;
+    }
+    .title-decorations{
+        position: absolute;
+        top: 17.5%;
+        width: 650px;
+        height: 150px;
+
+    }
+    .title{
+        position: absolute;
+        top: 15%;
+        font-size: 400%;
+    }
+
+
+    .text-box{
+        position: absolute;
+        top: 60%;
+        background-color: #FFDFBE;
+        border-radius: 10px;
+        width: 500px;
+        height: 70px;
+        text-align: center;
+        font-size: 120%;
+    }
+    .save-button{
+        position: absolute;
+        top: 60%;
+        background-color: #FFDFBE;
+        border-radius: 10px;
+        height: 70px;
+        width: 70px;
+        left: calc(50% + 270px);
+    }
+    .save-button img{
+        width: 40px;
+        height: 40px;
+        margin: 15px;
+    }
+
+
+    .generate-button-decorations{
+        position: absolute;
+        top: 75%;
+    }
+    .generate-button{
+        position: absolute;
+        top: 77.5%;
+        background-color: #B3EFA9;
+        border-radius: 100px;
+        width: 250px;
+        text-align: center;
+        font-size: 130%;
+    }
+
+
+</style>
 
 <body>
 
@@ -33,30 +133,31 @@
     </header>
 
     <main>
+        
         <div class="background">
-            <img class="background_1" src="Group 11.png" alt="background">
-            <img class="background_star1" src="Star 1.png" alt="star">
-        </div>
+            <img class="background-image" src="Group 11.png" alt="background-image">
 
-        <div class="main_text">
-            <h1>Головна сторінка</h1>
-            <img src="Group 9.png" alt="decor">
-        </div>
+            <div class="background-items">
 
-        <div class="main_textbox">
-            <div class="text">
-                <p id="quoteText">Тут будут цитаты</p>
-            </div>
-            <div class="button">
-                <img src="arrow-down-sign-to-navigate.png" alt="arrow">
-            </div>
-        </div>
+                <img class="title-star" src="Star 1.png" alt="star">
+                <img class="title-decorations" src="Group 9.png" alt="decorations">
+                <h1 class="title">Головна сторінка</h1>
 
-        <div class="main_generate_button" onclick="generateQuote()">
-            <div class="text">
-                <p>Згенерувати</p>
+                <div class="text-box">
+                    <p id="quoteText">Тут будуть цитати</p>
+                </div>
+                <div class="save-button">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2874/2874091.png" alt="save">
+                </div>
+
+                <img class="generate-button-decorations" src="Group 10.png" alt="decorations">
+                <div class="generate-button" onclick="generateQuote()">
+                    <p><b>Згенерувати</b></p>
+                </div>
+
             </div>
         </div>
+        
     </main>
 
     <footer>
