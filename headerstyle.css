@@ -17,19 +17,18 @@
     transition: width 0.3s ease;
     z-index: 10;
 }
-.sidebar:hover{
-    width: 200px;
 
+.sidebar:hover {
+    width: 200px;
 }
+
 .sidebar:hover .name {
     color: #000;
 }
 
-
 .sidebar .links {
     list-style: none;
     margin-top: 20px;
-
     scrollbar-width: none;
     height: calc(100% - 140px);
     width: 100%;
@@ -41,17 +40,133 @@
     align-items: center;
     transition: background 0.2s ease;
 }
+
 .links li .icon {
     margin-left: 5px;
     width: 30px;
     height: 30px;
 }
+
 .links li .name {
     margin-left: 5px;
     color: #00000000;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
+
+
 .links li:hover {
     cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
 }
+
+
+
+
+/*.main {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+}
+
+.background {
+    pointer-events: none;
+    position: relative;
+}
+
+.background_1 {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 700px;
+}
+
+.background_star1 {
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    left: calc(50% - 110px);
+    top: 100px;
+    z-index: 1;
+}
+
+.main_text {
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+.main_text h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 350%;
+    margin-top: 50px;
+}
+
+.main_textbox {
+    position: relative;
+    width: 35%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 300px;
+    display: flex;
+}
+
+.main_textbox .text {
+    background-color: #FFDFBE;
+    border-radius: 10px;
+    height: 100%;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_textbox .text p {
+    font-size: 150%;
+    margin: 0;
+}
+
+.main_textbox .button {
+    background-color: #FFDFBE;
+    border-radius: 10px;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_textbox .button img {
+    width: 40px;
+    height: 40px;
+}
+
+.main_generate_button {
+    width: 25%;
+    height: 105px;
+    margin: 50px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_generate_button .text {
+    background-color: #C3EFA9;
+    height: 60%;
+    width: 60%;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.main_generate_button .text:hover {
+    background-color: #A8E080;
+}
+
+.main_generate_button .text p {
+    font-size: 150%;
+    margin: 0;
+} /*

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Генератор цитат</title>
+    <title>Збережені цитати</title>
     <link rel="stylesheet" href="headerstyle.css">
     <script src="script.js" defer></script>
 </head>
@@ -16,7 +16,6 @@
         background: #fff;
         transition: background 0.6s ease;
     }
-
     main{
         position: fixed;
         display: flex;
@@ -29,6 +28,7 @@
 
     
     .background{
+        
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -50,66 +50,78 @@
     }
 
 
-    .title-star{
-        position: absolute;
-        top: 15%;
-        width: 220px;
-        height: 190px;
-    }
-    .title-decorations{
-        position: absolute;
-        top: 17.5%;
-        width: 650px;
-        height: 150px;
-
-    }
     .title{
         position: absolute;
-        top: 15%;
+        text-align: center;
         font-size: 400%;
+        z-index: 2;
+    }
+    .title-star-1{
+        position: absolute;
+        top: 40px;
+        width: 100px;
+        height: 100px;
+        left: calc(50% - 200px)
+    }
+    .title-star-2{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 41px;
+        left: calc(50% + 129px);
+        z-index: 3;
     }
 
 
-    .text-box{
+    .quotes{
         position: absolute;
-        top: 60%;
-        background-color: #FFDFBE;
-        border-radius: 10px;
-        width: 500px;
-        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        top: 250px;
+        width: 100%;
+        height: 100%;
+
+        visibility: hidden;
+        
+    }
+    .quotes div {
+        background-color: #FFE5B4;
         text-align: center;
-        font-size: 120%;
-    }
-    .save-button{
-        position: absolute;
-        top: 60%;
-        background-color: #FFDFBE;
-        border-radius: 10px;
-        height: 70px;
-        width: 70px;
-        left: calc(50% + 270px);
-        cursor: pointer;
-    }
-    .save-button img{
-        width: 40px;
-        height: 40px;
-        margin: 15px;
+        border-radius: 20px;
+        margin: 10px;
+        width: 40%;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 150%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
 
-    .generate-button-decorations{
+    .none-quotes-message{
+        display: flex;
         position: absolute;
-        top: 75%;
-    }
-    .generate-button{
-        position: absolute;
-        top: 77.5%;
-        background-color: #B3EFA9;
-        border-radius: 100px;
-        width: 250px;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        font-size: 130%;
-        cursor: pointer;
+        width: 100%;
+
+        /* visibility: hidden; */
+
+    }
+    .none-quotes{
+        position: absolute;
+        text-align: center;
+        top: 500px;
+    }
+    .sad-smile{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 570px;
     }
 
     body.dark-theme {
@@ -128,6 +140,14 @@
         color: #fff;
     }
 
+    body.dark-theme .none-quotes{
+        transition: background 0.4s ease;
+        color: #fff;
+    }
+
+
+
+
 </style>
 
 <body>
@@ -142,7 +162,7 @@
 
                 <li class="Saved">
                     <img class="icon" src="https://cdn-icons-png.flaticon.com/128/2874/2874091.png" alt="icon">
-                    <a class="name" href="saved.html">Збереженні</a>
+                    <a class="name" href="saved.html">Збережені</a>
                 </li><br>
 
                 <li class="Thema">
@@ -153,37 +173,37 @@
         </aside>
     </header>
 
+
     <main>
-        
+
         <div class="background">
-            <img class="background-image" src="Group 11.png" alt="background-image">
+            <img class="background-image" src="Group 11_2.png" alt="background-image">
 
             <div class="background-items">
 
-                <img class="title-star" src="Star 1.png" alt="star">
-                <img class="title-decorations" src="Group 9.png" alt="decorations">
-                <h1 class="title">Головна сторінка</h1>
+                <h1 class="title">Збережені<br>цитати</h1>
+                <img class="title-star-1" src="Star 1_2.png" alt="decorations">
+                <img class="title-star-2" src="Group 12.png" alt="decorations">
 
-                <div class="text-box">
-                    <i><p id="quoteText">Тут будуть цитати</p></i>
-                </div>
-                <div class="save-button">
-                    <img src="https://cdn-icons-png.flaticon.com/128/2874/2874091.png" alt="save">
+                <div class="none-quotes-message">
+                    <h1 class="none-quotes">У вас ще немає збережених цитат</h1>
+                    <img class="sad-smile" src="https://cdn-icons-png.flaticon.com/128/4989/4989793.png" alt="decorations">
                 </div>
 
-                <img class="generate-button-decorations" src="Group 10.png" alt="decorations">
-                <div class="generate-button" onclick="generateQuote()">
-                    <p><b>Згенерувати</b></p>
+                <div class="quotes">
+                    <div>
+                        <i><p>Цитата1</p></i>
+                    </div>
+
+                    <div>
+                        <i><p>Цитата2</p></i>
+                    </div>
+
                 </div>
 
             </div>
         </div>
-        
     </main>
-
-    <footer>
-        <!-- КОНТАКТНА ІНФОРМАЦІЯ -->
-    </footer>
-
 </body>
+
 </html>
